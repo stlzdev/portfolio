@@ -1,12 +1,13 @@
-import { NavLink } from "react-router-dom";
+import Button from "../shared/Button";
 
-export default function Memory() {
+export default function NotFound() {
   return (
-    <div className="container py-16">
-      <h1 className="text-2x1 font-bold mb-2">Page Not Found</h1>
-      <NavLink to="/" className="underline">
+    <section className="flex flex-col items-center justify-center gap-4 py-24 text-center">
+      <h1 className="text-3xl font-semibold tracking-tight">Page not found</h1>
+      <p className="text-secondary">This page wandered off somewhere.</p>
+      <Button to="/" variant="solid">
         Back to Home
-      </NavLink>
-    </div>
+      </Button>
+    </section>
   );
 }

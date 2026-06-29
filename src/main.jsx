@@ -5,9 +5,11 @@ import "/src/style.css";
 import RootLayout from "./shared/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Memory from "./pages/Memory";
-import Vision from "./pages/Vision";
 import Blog from "./pages/Blog";
+import Memory from "./pages/Memory";
+import Films from "./pages/Films";
+import Vision from "./pages/Vision";
+import Play from "./pages/Play";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
@@ -18,9 +20,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
-      { path: "memory", element: <Memory /> },
-      { path: "vision", element: <Vision /> },
       { path: "blog", element: <Blog /> },
+      { path: "memory", element: <Memory /> },
+      { path: "films", element: <Films /> },
+      { path: "vision", element: <Vision /> },
+      { path: "play", element: <Play /> },
     ],
   },
 ]);
