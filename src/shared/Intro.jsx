@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
-const SEEN_KEY = "intro-seen";
-
 function initialPhase() {
   if (typeof window === "undefined") return "done";
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const seen = sessionStorage.getItem(SEEN_KEY);
-  return reduce || seen ? "done" : "spin";
+  return reduce ? "done" : "spin";
 }
 
 // Full-screen intro overlay:
@@ -18,7 +15,6 @@ export default function Intro() {
 
   useEffect(() => {
     if (phase !== "spin") return;
-    sessionStorage.setItem(SEEN_KEY, "1");
     const timers = [
       setTimeout(() => setPhase("settle"), 1100),
       setTimeout(() => setPhase("open"), 1700),
