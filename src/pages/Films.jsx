@@ -60,13 +60,23 @@ export default function Films() {
 
   return (
     <section className="space-y-6">
-      <header className="space-y-1">
-        <h1 className="text-3xl font-semibold tracking-tight">Films</h1>
-        <p className="text-secondary">Films I've made. Click one to watch.</p>
+      <header className="max-w-2xl space-y-2">
+        <h1 className="text-3xl font-semibold tracking-tight">Stellis Films</h1>
+        <p className="text-secondary">
+          I have been making short films under the Stellis Films brand since
+          December 2024. I like making vox-pop street interviews, short
+          documentaries, and uplifting short-form pieces that tell human
+          stories. Through my films, I strive to capture the authenticity of
+          everyday people: their struggles, kindness, and what defines us as a
+          community. My work at Stellis Films contributes to a bigger life
+          vision, which I have coined as The Stellis Way. <br></br>
+          <br></br>For collaborations and commercial inquiries, please reach out
+          at {"stellsfilms@gmail.com"}.
+        </p>
       </header>
 
       {films.length === 0 ? (
-        <p className="text-secondary">No films yet — check back soon.</p>
+        <p className="text-secondary">No films yet, check back soon.</p>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {films.map((film) => (

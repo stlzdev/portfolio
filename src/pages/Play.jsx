@@ -110,7 +110,7 @@ export default function Play() {
         <div className="space-y-1">
           <h1 className="text-3xl font-semibold tracking-tight">Play</h1>
           <p className="text-secondary">
-            Memory match — flip cards and find all 12 pairs. Good for the brain.
+            Memory match, flip cards and find all 12 pairs. Good for the brain.
           </p>
         </div>
         <div className="flex items-center gap-3 text-sm text-secondary">

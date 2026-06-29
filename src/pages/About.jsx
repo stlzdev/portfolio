@@ -1,3 +1,5 @@
+import Reveal from "../shared/Reveal";
+
 const EXPERIENCE = [
   {
     role: "Brain-Computer Interface Software Engineer",
@@ -5,7 +7,7 @@ const EXPERIENCE = [
     location: "Salt Lake City, UT",
     dates: "May 2026 – Present",
     points: [
-      "Building a VLM-based intent-to-action mapping system for agentic computer control by BCI users — designing the task schema, model architecture, and command-execution UI — reaching 92% task accuracy and sub-3s latency across 17 real-world control tasks.",
+      "Building a VLM-based intent-to-action mapping system for agentic computer control by BCI users, designing the task schema, model architecture, and command-execution UI, reaching 92% task accuracy and sub-3s latency across 17 real-world control tasks.",
       "Developing an evaluation framework for BCI intent-mapping models measuring task success, latency, and robustness, supporting autonomous device control from intracranial neural signals.",
     ],
   },
@@ -15,8 +17,8 @@ const EXPERIENCE = [
     location: "Philadelphia, PA",
     dates: "May 2025 – Present",
     points: [
-      "Preparing a manuscript on a large-scale online directed free-recall experiment — leading experimental design, technical support, Python statistical analysis, and publication-ready visualizations.",
-      "Built and deployed a jsPsych/JavaScript experiment with Prolific integration, randomized audio stimuli, attention-screening logic, and Flask REST endpoints storing data in SQL — supporting 470+ participant sessions.",
+      "Preparing a manuscript on a large-scale online directed free-recall experiment, leading experimental design, technical support, Python statistical analysis, and publication-ready visualizations.",
+      "Built and deployed a jsPsych/JavaScript experiment with Prolific integration, randomized audio stimuli, attention-screening logic, and Flask REST endpoints storing data in SQL, supporting 470+ participant sessions.",
       "Processed 350+ high-dimensional EEG datasets through a Python pipeline for preprocessing, time-frequency feature extraction, and theta-band spectral analysis linked to memory encoding.",
     ],
   },
@@ -50,6 +52,28 @@ const EXPERIENCE = [
   },
 ];
 
+const EDUCATION = [
+  {
+    school: "University of Pennsylvania",
+    degree: "B.S.E. in Artificial Intelligence · Minor in Neuroscience",
+    extra: "M.S.E. in Bioengineering (Neuroengineering)",
+    dates: "Expected May 2027",
+    detail:
+      "GPA 3.94 · Eta Kappa Nu Honor Society · Widjaja Entrepreneurship Fellow",
+    coursework: [
+      "Brain-Computer Interfaces",
+      "Machine Learning",
+      "Computer Vision",
+      "Software Engineering",
+      "Data Structures & Algorithms",
+      "Dynamical Systems",
+      "Big Data Analytics",
+      "Linear Algebra",
+      "Systems Neuroscience",
+    ],
+  },
+];
+
 const SKILL_COLORS = {
   sky: "bg-sky-50 text-sky-700 border-sky-200",
   violet: "bg-violet-50 text-violet-700 border-violet-200",
@@ -61,37 +85,116 @@ const SKILL_COLORS = {
 };
 
 const SKILLS = [
-  { label: "Software", icon: "💻", color: "sky", items: ["Python", "Go", "JavaScript/TypeScript", "Java", "Node.js", "Linux", "Git"] },
-  { label: "Systems & Cloud", icon: "☁️", color: "violet", items: ["REST APIs", "Flask", "Docker", "AWS EC2"] },
-  { label: "Data & ML", icon: "🤖", color: "emerald", items: ["PyTorch", "Hugging Face", "SQL", "Polars", "NumPy", "SciPy", "Pandas"] },
-  { label: "Neurotech", icon: "🧠", color: "rose", items: ["EEG & ECoG decoding", "BCI systems", "Neural signal processing", "Feature extraction", "Time-frequency analysis"] },
-  { label: "UX / UI", icon: "🎨", color: "amber", items: ["React Native", "HTML/CSS", "Vite", "Next.js", "Tailwind"] },
-  { label: "Languages", icon: "🌏", color: "teal", items: ["Cantonese", "Mandarin", "German", "Indonesian"] },
-  { label: "Interests", icon: "✨", color: "fuchsia", items: ["Memory athletics", "Morse code", "Videography", "Endurance running"] },
+  {
+    label: "Software",
+    icon: "💻",
+    color: "sky",
+    items: [
+      "Python",
+      "Go",
+      "JavaScript/TypeScript",
+      "Java",
+      "Node.js",
+      "Linux",
+      "Git",
+    ],
+  },
+  {
+    label: "Systems & Cloud",
+    icon: "☁️",
+    color: "violet",
+    items: ["REST APIs", "Flask", "Docker", "AWS EC2"],
+  },
+  {
+    label: "Data & ML",
+    icon: "🤖",
+    color: "emerald",
+    items: [
+      "PyTorch",
+      "Hugging Face",
+      "SQL",
+      "Polars",
+      "NumPy",
+      "SciPy",
+      "Pandas",
+    ],
+  },
+  {
+    label: "Neurotech",
+    icon: "🧠",
+    color: "rose",
+    items: [
+      "EEG & ECoG decoding",
+      "BCI systems",
+      "Neural signal processing",
+      "Feature extraction",
+      "Time-frequency analysis",
+    ],
+  },
+  {
+    label: "UX / UI",
+    icon: "🎨",
+    color: "amber",
+    items: ["React Native", "HTML/CSS", "Vite", "Next.js", "Tailwind"],
+  },
+  {
+    label: "Languages",
+    icon: "🌏",
+    color: "teal",
+    items: ["Cantonese", "Mandarin", "German", "Indonesian"],
+  },
+  {
+    label: "Interests",
+    icon: "✨",
+    color: "fuchsia",
+    items: [
+      "Memory athletics",
+      "Morse code",
+      "Videography",
+      "Endurance running",
+    ],
+  },
 ];
 
-// Add your projects here — they'll render as cards below.
+// Add your projects here, they'll render as cards below.
 // Example: { title: "NeuroRAVE", blurb: "EEG neurofeedback system.", link: "https://..." }
 const PROJECTS = [];
 
 export default function About() {
   return (
-    <div className="mx-auto max-w-3xl space-y-14">
-      <section className="space-y-3">
-        <h1 className="text-3xl font-semibold tracking-tight">About</h1>
-        <p className="text-secondary">
-          I'm Andrew — an AI & Neuroscience student at the University of
-          Pennsylvania on a mission to{" "}
-          <span className="font-medium text-ink">build better brains.</span>
-        </p>
+    <div className="mx-auto max-w-3xl">
+      <section>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+          <div className="space-y-4">
+            <h1 className="text-3xl font-semibold tracking-tight">About</h1>
+            <p className="text-secondary">
+              My name is Andrew Stellis Wong. I am an engineer and researcher
+              building the next generation of neurotechnology. I bring five years
+              of computational research experience in the neural mechanisms of
+              memory consolidation and statistical learning, and I've led/co-led
+              the development of seven technical projects into production-ready
+              systems. Outside of work, I enjoy reading philosophy, making
+              videos and eating eggs.
+            </p>
+          </div>
+          <img
+            src="/headshot.jpeg"
+            alt="Andrew S. Wong"
+            className="h-44 w-44 shrink-0 rounded-2xl border border-line object-cover"
+          />
+        </div>
       </section>
 
       {/* Work experience */}
-      <section className="space-y-6">
+      <section className="mt-10 space-y-6">
         <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
         <div className="space-y-7">
           {EXPERIENCE.map((job, i) => (
-            <div key={i} className="border-l-2 border-line pl-5">
+            <Reveal
+              key={i}
+              delay={i * 80}
+              className="border-l-2 border-line pl-5"
+            >
               <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
                 <h3 className="font-medium">
                   {job.role}{" "}
@@ -107,13 +210,47 @@ export default function About() {
                   <li key={j}>{p}</li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="mt-14 space-y-6">
+        <h2 className="text-xl font-semibold tracking-tight">Education</h2>
+        <div className="space-y-7">
+          {EDUCATION.map((edu, i) => (
+            <Reveal
+              key={i}
+              delay={i * 80}
+              className="border-l-2 border-line pl-5"
+            >
+              <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                <h3 className="font-medium">{edu.school}</h3>
+                <span className="whitespace-nowrap text-sm text-secondary">
+                  {edu.dates}
+                </span>
+              </div>
+              <p className="text-sm">{edu.degree}</p>
+              {edu.extra && <p className="text-sm">{edu.extra}</p>}
+              <p className="mt-1 text-sm text-secondary">{edu.detail}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {edu.coursework.map((c) => (
+                  <span
+                    key={c}
+                    className="rounded-full border border-line bg-surface px-3 py-1 text-xs text-secondary"
+                  >
+                    {c}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* Skills */}
-      <section className="space-y-6">
+      <section className="mt-14 space-y-6">
         <h2 className="text-xl font-semibold tracking-tight">Skills</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {SKILLS.map((group) => (
@@ -142,8 +279,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Projects — add your own in the PROJECTS array above */}
-      <section className="space-y-6">
+      {/* Projects, add your own in the PROJECTS array above */}
+      <section className="mt-14 space-y-6">
         <h2 className="text-xl font-semibold tracking-tight">Projects</h2>
         {PROJECTS.length === 0 ? (
           <p className="text-secondary">Projects coming soon.</p>
