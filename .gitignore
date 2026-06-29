@@ -3,3 +3,4 @@ context/
 dist
 .DS_Store
 *.local
+context/

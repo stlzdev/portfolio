@@ -69,9 +69,7 @@ export default function Films() {
           stories. Through my films, I strive to capture the authenticity of
           everyday people: their struggles, kindness, and what defines us as a
           community. My work at Stellis Films contributes to a bigger life
-          vision, which I have coined as The Stellis Way. <br></br>
-          <br></br>For collaborations and commercial inquiries, please reach out
-          at {"stellsfilms@gmail.com"}.
+          vision, which I have coined as The Stellis Way.
         </p>
       </header>
 

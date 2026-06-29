@@ -162,7 +162,7 @@ const PROJECTS = [];
 
 export default function About() {
   return (
-    <div className="mx-auto max-w-3xl">
+    <div>
       <section>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="space-y-4">
